@@ -21,8 +21,13 @@ A single-page fan website built with HTML, CSS, and JavaScript.
 ## 🎃 How to Run
 
 1. Download or clone the project.
-2. Just open `index.html` in your browser.
-3. No installation needed.
+
+```bash
+git clone https://github.com/Kaveeshamalindi/hogwarts-explorer.git
+```
+
+3. Just open `index.html` in your browser.
+4. No installation needed.
 
 ---
 
