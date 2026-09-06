@@ -5,7 +5,7 @@ A single-page fan website built with HTML, CSS, and JavaScript.
 **Live Demo:** https://kaveeshamalindi.github.io/hogwarts-explorer/
 
 <p align="center">
-  <img src="img.png" width="500">
+  <img src="img.png" width="800">
 </p>
 
 ---
@@ -20,7 +20,9 @@ A single-page fan website built with HTML, CSS, and JavaScript.
 
 ## 🎃 How to Run
 
-Just open `index.html` in your browser. No installation needed.
+1. Download or clone the project.
+2. Just open `index.html` in your browser.
+3. No installation needed.
 
 ---
 
