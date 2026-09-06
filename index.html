@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Wizarding World | A Magical Journey</title>
+
+  <meta name="description"
+        content="Enter a cinematic magical world of Hogwarts, houses, characters, spells and enchanted places.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cinzel+Decorative:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     LOADER
+===================================================== -->
+
+<div class="loader" id="loader">
+  <div class="loader-content">
+
+    <div class="loader-wand">
+      <span></span>
+    </div>
+
+    <p>Preparing your invitation...</p>
+
+    <div class="loader-line">
+      <span></span>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- =====================================================
+     MAGICAL ATMOSPHERE
+===================================================== -->
+
+<div class="cursor-glow"></div>
+
+<div class="screen-flash" id="screen-flash"></div>
+
+<canvas id="particle-canvas"></canvas>
+
+<div class="fog fog-one"></div>
+<div class="fog fog-two"></div>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="site-header" id="site-header">
+
+  <nav class="navbar">
+
+    <a href="#home" class="brand">
+      <span class="brand-symbol">✧</span>
+      <span>The Wizarding World</span>
+    </a>
+
+    <button class="nav-toggle"
+            id="nav-toggle"
+            aria-label="Toggle navigation">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+    <ul class="nav-menu" id="nav-menu">
+
+      <li><a href="#home">Home</a></li>
+      <li><a href="#hogwarts">Hogwarts</a></li>
+      <li><a href="#houses">Houses</a></li>
+      <li><a href="#characters">Characters</a></li>
+      <li><a href="#magic">Magic</a></li>
+      <li><a href="#spells">Spells</a></li>
+
+    </ul>
+
+  </nav>
+
+</header>
+
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+  <div class="hero-image"></div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="moon"></div>
+
+  <div class="hero-content">
+
+    <p class="hero-kicker">
+      The castle is waiting
+    </p>
+
+    <h1>
+      Enter the
+      <span>Wizarding World</span>
+    </h1>
+
+    <p class="hero-description">
+      Beyond the ordinary lies a world of ancient castles,
+      enchanted forests, forgotten legends and extraordinary magic.
+    </p>
+
+    <button class="magic-button" id="hero-cta">
+      <span>Begin Your Journey</span>
+    </button>
+
+  </div>
+
+  <div class="hero-bottom">
+
+    <span>Scroll to explore</span>
+
+    <div class="scroll-arrow"></div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     HOGWARTS
+===================================================== -->
+
+<section class="hogwarts-section" id="hogwarts">
+
+  <div class="section-container">
+
+    <div class="section-heading reveal">
+
+      <p class="eyebrow">The legendary castle</p>
+
+      <h2>
+        Hogwarts
+        <span>School of Witchcraft and Wizardry</span>
+      </h2>
+
+      <p>
+        Hidden beyond the mountains and protected by ancient magic,
+        Hogwarts has stood for centuries as a home for young witches
+        and wizards.
+      </p>
+
+    </div>
+
+
+    <div class="hogwarts-feature">
+
+      <div class="hogwarts-image reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1618944913480-b67ee16d7b77?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGFycnklMjBwb3R0ZXJ8ZW58MHx8MHx8fDA%3D"
+          alt="Ancient castle surrounded by mountains">
+
+        <div class="image-frame"></div>
+
+      </div>
+
+
+      <div class="hogwarts-story reveal">
+
+        <span class="chapter-number">I</span>
+
+        <h3>
+          Where magic
+          <em>comes alive</em>
+        </h3>
+
+        <p>
+          Towering above the dark waters of the loch,
+          Hogwarts is more than a school. Its moving staircases,
+          enchanted portraits and candlelit halls have witnessed
+          generations of magical history.
+        </p>
+
+        <p>
+          Every year, new students cross the lake beneath
+          the castle towers and begin a journey they will never forget.
+        </p>
+
+        <a href="#houses" class="gold-link">
+          Discover the Houses →
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     HOUSES
+===================================================== -->
+
+<section class="houses-section" id="houses">
+
+  <div class="section-container">
+
+    <div class="section-heading center reveal">
+
+      <p class="eyebrow">Choose your destiny</p>
+
+      <h2>
+        The Four
+        <span>Houses</span>
+      </h2>
+
+      <p>
+        Four houses. Four personalities.
+        One legendary school.
+      </p>
+
+    </div>
+
+
+    <div class="houses-grid">
+
+
+      <article class="house-card gryffindor reveal">
+
+        <div class="house-image">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsef1ePYKtJeO0pf1qxCZ86YeUgFSZCadyce07LfeUUA&s=10"
+            alt="Majestic lion statue, the emblem of Gryffindor">
+
+        </div>
+
+        <div class="house-content">
+
+          <span class="house-number">01</span>
+
+          <h3>Gryffindor</h3>
+
+          <p class="house-motto">
+            Courage · Bravery · Chivalry
+          </p>
+
+          <p>
+            Where the brave of heart find their home.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="house-card slytherin reveal">
+
+        <div class="house-image">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaQDpEha316mWh5wIEGchsEaS51RpOJRpDX58fcxnf8Q&s=10"
+            alt="Coiled serpent, the emblem of Slytherin">
+
+        </div>
+
+        <div class="house-content">
+
+          <span class="house-number">02</span>
+
+          <h3>Slytherin</h3>
+
+          <p class="house-motto">
+            Ambition · Cunning · Determination
+          </p>
+
+          <p>
+            Where ambition becomes extraordinary.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="house-card ravenclaw reveal">
+
+        <div class="house-image">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrTUzn2-1TIJiymt_4PTu-cRFcpa_MwmmTdQOP-KHQ7w&s=10"
+            alt="Eagle in flight, the emblem of Ravenclaw">
+
+        </div>
+
+        <div class="house-content">
+
+          <span class="house-number">03</span>
+
+          <h3>Ravenclaw</h3>
+
+          <p class="house-motto">
+            Wisdom · Curiosity · Wit
+          </p>
+
+          <p>
+            Where brilliant minds discover the unknown.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="house-card hufflepuff reveal">
+
+        <div class="house-image">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpNuYZB9yF7GyjdIdJC3GZtULuD4CtOANQOeH8GnwrIw&s=10"
+            alt="Badger, the emblem of Hufflepuff">
+
+        </div>
+
+        <div class="house-content">
+
+          <span class="house-number">04</span>
+
+          <h3>Hufflepuff</h3>
+
+          <p class="house-motto">
+            Loyalty · Patience · Kindness
+          </p>
+
+          <p>
+            Where loyalty and friendship shine brightest.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CHARACTERS
+===================================================== -->
+
+<section class="characters-section" id="characters">
+
+  <div class="section-container">
+
+    <div class="section-heading center reveal">
+
+      <p class="eyebrow">Legends of magic</p>
+
+      <h2>
+        Faces of the
+        <span>Wizarding World</span>
+      </h2>
+
+    </div>
+
+
+    <div class="characters-grid">
+
+
+      <article class="character-card reveal"
+               data-name="Harry Potter"
+               data-house="Gryffindor"
+               data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSctTipT33J1gfH-_eNOl25fnYGOoAtrTspaO2FfYeCZA&s=10"
+               data-description="Known as the Boy Who Lived, Harry Potter became one of the most important figures in the wizarding world.">
+
+        <div class="character-image">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSctTipT33J1gfH-_eNOl25fnYGOoAtrTspaO2FfYeCZA&s=10"
+            alt="Harry Potter">
+
+          <div class="character-gradient"></div>
+
+        </div>
+
+        <div class="character-info">
+
+          <span>Gryffindor</span>
+
+          <h3>Harry Potter</h3>
+
+          <button class="details-button">
+            Explore Story
+          </button>
+
+        </div>
+
+      </article>
+
+
+      <article class="character-card reveal"
+               data-name="Hermione Granger"
+               data-house="Gryffindor"
+               data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZWrCM-RVE_L278e3FeZkrU59WR_FNGiit2x7peRo6Bw&s=10"
+               data-description="Brilliant, determined and fiercely loyal, Hermione's intelligence and courage made her one of the greatest witches of her generation.">
+
+        <div class="character-image">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZWrCM-RVE_L278e3FeZkrU59WR_FNGiit2x7peRo6Bw&s=10"
+            alt="Hermione Granger">
+
+          <div class="character-gradient"></div>
+
+        </div>
+
+        <div class="character-info">
+
+          <span>Gryffindor</span>
+
+          <h3>Hermione Granger</h3>
+
+          <button class="details-button">
+            Explore Story
+          </button>
+
+        </div>
+
+      </article>
+
+
+      <article class="character-card reveal"
+               data-name="Ron Weasley"
+               data-house="Gryffindor"
+               data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe0fnttSB5_NrzNplfaJgyXcp9PiA_Umsy00XDFuN11A&s=10"
+               data-description="Ron Weasley was Harry's loyal friend, a talented chess player and a courageous member of the Hogwarts trio.">
+
+        <div class="character-image">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe0fnttSB5_NrzNplfaJgyXcp9PiA_Umsy00XDFuN11A&s=10"
+            alt="Ron Weasley">
+
+          <div class="character-gradient"></div>
+
+        </div>
+
+        <div class="character-info">
+
+          <span>Gryffindor</span>
+
+          <h3>Ron Weasley</h3>
+
+          <button class="details-button">
+            Explore Story
+          </button>
+
+        </div>
+
+      </article>
+
+
+      <article class="character-card reveal"
+               data-name="Albus Dumbledore"
+               data-house="Headmaster"
+               data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHFHgs1auS8YLc-SiHni2RjxtCytV9L1atNpTLKEGbcw&s=10"
+               data-description="A legendary wizard and headmaster of Hogwarts, remembered for his wisdom, power and belief in the strength of love.">
+
+        <div class="character-image">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHFHgs1auS8YLc-SiHni2RjxtCytV9L1atNpTLKEGbcw&s=10"
+            alt="Albus Dumbledore">
+
+          <div class="character-gradient"></div>
+
+        </div>
+
+        <div class="character-info">
+
+          <span>Headmaster</span>
+
+          <h3>Albus Dumbledore</h3>
+
+          <button class="details-button">
+            Explore Story
+          </button>
+
+        </div>
+
+      </article>
+
+
+      <article class="character-card reveal"
+               data-name="Severus Snape"
+               data-house="Slytherin"
+               data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp478hkuwCpaXNKeLz4VQbUdcf1p6wgo7jbaDoOaK2wA&s=10"
+               data-description="The mysterious Potions Master whose story was filled with secrets, sacrifice and complicated loyalty.">
+
+        <div class="character-image">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp478hkuwCpaXNKeLz4VQbUdcf1p6wgo7jbaDoOaK2wA&s=10"
+            alt="Severus Snape">
+
+          <div class="character-gradient"></div>
+
+        </div>
+
+        <div class="character-info">
+
+          <span>Slytherin</span>
+
+          <h3>Severus Snape</h3>
+
+          <button class="details-button">
+            Explore Story
+          </button>
+
+        </div>
+
+      </article>
+
+
+      <article class="character-card reveal"
+               data-name="Draco Malfoy"
+               data-house="Slytherin"
+               data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaSDsSiRxNa3NEjZqbdPvsUyrd3oZjZbZI3ARMXdS57w&s=10"
+               data-description="Draco Malfoy grew up surrounded by family expectations and slowly discovered the difficult cost of living under them.">
+
+        <div class="character-image">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaSDsSiRxNa3NEjZqbdPvsUyrd3oZjZbZI3ARMXdS57w&s=10"
+            alt="Draco Malfoy">
+
+          <div class="character-gradient"></div>
+
+        </div>
+
+        <div class="character-info">
+
+          <span>Slytherin</span>
+
+          <h3>Draco Malfoy</h3>
+
+          <button class="details-button">
+            Explore Story
+          </button>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     MAGICAL WORLD
+===================================================== -->
+
+<section class="magic-section" id="magic">
+
+  <div class="section-container">
+
+    <div class="section-heading center reveal">
+
+      <p class="eyebrow">Beyond Hogwarts</p>
+
+      <h2>
+        A World Filled With
+        <span>Magic</span>
+      </h2>
+
+    </div>
+
+
+    <div class="magic-grid">
+
+
+      <article class="magic-card reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1625685959735-77460dc42f06?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8SGFycnklMjBQb3R0ZXIlMjBtYWdpYyUyMFBvdGlvbnN8ZW58MHx8MHx8fDA%3D"
+          alt="Mystical glowing potion bottle in candlelight">
+
+        <div class="magic-card-overlay"></div>
+
+        <div class="magic-card-content">
+
+          <span>01</span>
+
+          <h3>Potions</h3>
+
+          <p>
+            Ancient recipes, mysterious ingredients
+            and cauldrons filled with possibility.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="magic-card reveal">
+
+        <img
+          src="https://images.pexels.com/photos/8391282/pexels-photo-8391282.jpeg?auto=compress&cs=tinysrgb&w=1000"
+          alt="Close-up of a wand resting on a spell book">
+
+        <div class="magic-card-overlay"></div>
+
+        <div class="magic-card-content">
+
+          <span>02</span>
+
+          <h3>Wands</h3>
+
+          <p>
+            Every wand has a story.
+            Every wizard has a connection.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="magic-card reveal">
+
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1h_BqyVrYIwcvko0MvVxjPs43_FrrDSLHqQQt8zFmfQ&s=10"
+          alt="Mysterious dark forest shrouded in fog">
+
+        <div class="magic-card-overlay"></div>
+
+        <div class="magic-card-content">
+
+          <span>03</span>
+
+          <h3>Forbidden Forest</h3>
+
+          <p>
+            Ancient trees hide creatures,
+            secrets and things best left undiscovered.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="magic-card reveal">
+
+        <img
+          src="https://images.pexels.com/photos/14814114/pexels-photo-14814114.jpeg?auto=compress&cs=tinysrgb&w=1000"
+          alt="Owl perched in a dark mystical forest">
+
+        <div class="magic-card-overlay"></div>
+
+        <div class="magic-card-content">
+
+          <span>04</span>
+
+          <h3>Creatures</h3>
+
+          <p>
+            Dragons, owls, centaurs and countless
+            magical beings inhabit this world.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="magic-card reveal">
+
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKPjs6TtKlc8UrDTRa6ILW8qdaamtlhFELARl3gxqNsQ&s=10"
+          alt="Silhouette soaring through a dramatic sky, evoking Quidditch flight">
+
+        <div class="magic-card-overlay"></div>
+
+        <div class="magic-card-content">
+
+          <span>05</span>
+
+          <h3>Quidditch</h3>
+
+          <p>
+            Speed, rivalry and impossible flights
+            high above the pitch.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="magic-card reveal">
+
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyZlNrG0RkxMh2gxyq4pWkQQhb5SRw2z2MndlSIb8bDA&s=10"
+          alt="Old magical parchment">
+
+        <div class="magic-card-overlay"></div>
+
+        <div class="magic-card-content">
+
+          <span>06</span>
+
+          <h3>Ancient Magic</h3>
+
+          <p>
+            Forgotten knowledge waits between
+            the pages of ancient books.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     SPELLS
+===================================================== -->
+
+<section class="spells-section" id="spells">
+
+  <div class="spell-background"></div>
+
+  <div class="section-container spell-container">
+
+    <div class="section-heading center reveal">
+
+      <p class="eyebrow">Wand at the ready</p>
+
+      <h2>
+        Speak the
+        <span>Incantation</span>
+      </h2>
+
+      <p>
+        Choose your spell and awaken the magic.
+      </p>
+
+    </div>
+
+
+    <div class="spell-buttons">
+
+      <button data-spell="Lumos"
+              data-meaning="Creates a magical light at the tip of a wand.">
+        Lumos
+      </button>
+
+      <button data-spell="Expecto Patronum"
+              data-meaning="Summons a protective Patronus against dark creatures.">
+        Expecto Patronum
+      </button>
+
+      <button data-spell="Wingardium Leviosa"
+              data-meaning="Causes an object to levitate.">
+        Wingardium Leviosa
+      </button>
+
+      <button data-spell="Expelliarmus"
+              data-meaning="Disarms an opponent by forcing their wand away.">
+        Expelliarmus
+      </button>
+
+      <button data-spell="Alohomora"
+              data-meaning="Unlocks doors and objects protected by ordinary locks.">
+        Alohomora
+      </button>
+
+    </div>
+
+
+    <div class="spell-display" id="spell-display">
+
+      <div class="spell-light"></div>
+
+      <p class="spell-hint">
+        Choose an incantation above...
+      </p>
+
+      <h3 id="spell-name"></h3>
+
+      <p id="spell-meaning"></p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL CTA
+===================================================== -->
+
+<section class="final-section">
+
+  <div class="final-image"></div>
+
+  <div class="final-overlay"></div>
+
+  <div class="final-content reveal">
+
+    <p class="eyebrow">
+      Your journey begins here
+    </p>
+
+    <h2>
+      Some doors are
+      <span>meant to be opened.</span>
+    </h2>
+
+    <a href="#home" class="magic-button">
+      Return to the Castle
+    </a>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     CHARACTER MODAL
+===================================================== -->
+
+<div class="modal-overlay" id="modal-overlay">
+
+  <div class="character-modal">
+
+    <button class="modal-close" id="modal-close">
+      ×
+    </button>
+
+    <img id="modal-image" src="" alt="">
+
+    <div class="modal-content">
+
+      <p id="modal-house"></p>
+
+      <h2 id="modal-name"></h2>
+
+      <p id="modal-description"></p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+
+      <div class="footer-brand">
+        <span>✧</span>
+        The Wizarding World
+      </div>
+
+      <p>
+        A fan-made magical experience built
+        with HTML, CSS and JavaScript.
+      </p>
+
+    </div>
+
+
+    <div class="footer-navigation">
+
+      <a href="#home">Home</a>
+      <a href="#hogwarts">Hogwarts</a>
+      <a href="#houses">Houses</a>
+      <a href="#characters">Characters</a>
+      <a href="#magic">Magic</a>
+      <a href="#spells">Spells</a>
+
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © <span id="year"></span> The Wizarding World · Fan-made project
+  </div>
+
+</footer>
+
+
+<button class="back-top" id="back-top">
+  ↑
+</button>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
